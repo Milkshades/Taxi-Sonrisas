@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Movil</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+	<!-- SideBar -->
+	<section class="full-box cover dashboard-sideBar">
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+		<div class="full-box dashboard-sideBar-ct">
+			<!--SideBar Title -->
+			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+				Taxi Sonrisas <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+			</div>
+			<!-- SideBar User info -->
+			<div class="full-box dashboard-sideBar-UserInfo">
+				<figure class="full-box">
+					<img src="./assets/img/avatar.jpg" alt="UserIcon">
+					<figcaption class="text-center text-titles">Usuario</figcaption>
+				</figure>
+				<ul class="full-box list-unstyled text-center">
+					<li>
+						<a href="#!">
+							<i class="zmdi zmdi-settings"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#!" class="btn-exit-system">
+							<i class="zmdi zmdi-power"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- SideBar Menu -->
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+				<li>
+					<a href="home.html">
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Consultas
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-search zmdi-hc-fw"></i> Consultas Movil <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="movil.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Movil</a>
+						</li>
+						<li>
+							<a href="movilAsignada.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Movil Asignada</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Conductores <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="conductorv1.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Conductor versión 1</a>
+						</li>
+						<li>
+							<a href="conductorv2.html"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Conductor versión 2</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-alert-triangle zmdi-hc-fw"></i> Suspensiones <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="sanciones.html"><i class="zmdi zmdi-money-box zmdi-hc-fw"></i> Sanciones</a>
+						</li>
+						<li>
+							<a href="prorroga.html"><i class="zmdi zmdi-money zmdi-hc-fw"></i> Prórroga</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- Content page-->
+	<section class="full-box dashboard-contentPage">
+		<!-- NavBar -->
+		<nav class="full-box dashboard-Navbar">
+			<ul class="full-box list-unstyled text-right">
+				<li class="pull-left">
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+				</li>
+				<li>
+					<a href="#!" class="btn-Notifications-area">
+						<i class="zmdi zmdi-notifications-none"></i>
+						<span class="badge">3</span>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-search">
+						<i class="zmdi zmdi-search"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-modal-help">
+						<i class="zmdi zmdi-help-outline"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- Content page -->
+		<div class="container-fluid">
+			<div class="page-header">
+			  <h1 class="text-titles"><i class="zmdi zmdi-search zmdi-hc-fw"></i> <strong>MOVIL</strong></h1>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
+					  	<li class="active"><a href="#list" data-toggle="tab">Consulta</a></li>
+					  	<li><a href="#profile" data-toggle="tab">Perfil de conductor</a></li>
+					  	<li><a href="#photo" data-toggle="tab">Foto del conductor</a></li>
+					  	<li><a href="#debt" data-toggle="tab">Detalle de deuda</a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+					  	<div class="tab-pane fade active in" id="list">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-xs-12 col-md-10 col-md-offset-1">
+									    <form action="">
+									    	<div class="form-group label-floating">
+											  <label class="control-label">N° Movil</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">N° de Placa</label>
+											  <input class="form-control" type="text">
+											</div>
+										    <p class="text-center">
+										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-search"></i> Buscar</button>
+										    </p>
+									    </form>
+									</div>
+								</div>
+							</div>
+							<div class="table-responsive">
+								<table class="table table-hover text-center">
+									<thead>
+										<tr>
+											<th class="text-center">#</th>
+											<th class="text-center">N° Movil</th>
+											<th class="text-center">Placa</th>
+											<th class="text-center">Modelo</th>
+											<th class="text-center">Year</th>
+											<th class="text-center">Conductor</th>
+											<th class="text-center">Perfil</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>187</td>
+											<td>ABC-123</td>
+											<td>Toyota Prius</td>
+											<td>2020</td>
+											<td>Juan Perez</td>
+											<td>
+												<a href="#!" class="btn btn-success btn-raised btn-xs btn-profile" data-toggle="tab">
+													<i class="zmdi zmdi-refresh"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>188</td>
+											<td>XYZ-789</td>
+											<td>Honda Civic</td>
+											<td>2019</td>
+												<td>Maria Lopez</td>
+											<td>
+												<a href="#!" class="btn btn-success btn-raised btn-xs btn-profile" data-toggle="tab">
+													<i class="zmdi zmdi-refresh"></i>
+												</a>
+											</td>
+											
+										</tr>
+									</tbody>
+								</table>
+							</div>
+					  	</div>
+					  	<div class="tab-pane fade" id="profile">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-xs-12 col-md-10 col-md-offset-1">
+										<form>
+											<div class="form-group label-floating">
+											  <label class="control-label">Nombre</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">Direccion</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">DNI</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">Fijo</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">Movistar</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">Claro</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">RPM</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">RPC</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">Nextel</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">Deuda</label>
+											  <input class="form-control" type="text">
+											</div>
+											<p class="text-center">
+												<a href="#!" class="btn btn-info btn-raised btn-sm btn-photo"><i class="zmdi zmdi-image"></i> Foto</a>
+												<a href="#!" class="btn btn-danger btn-raised btn-sm btn-debt"><i class="zmdi zmdi-money-box"></i> Deuda</a>
+											</p>
+										</form>
+									</div>
+								</div>
+							</div>
+					  	</div>
+					  	<div class="tab-pane fade" id="photo">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-xs-12 col-md-10 col-md-offset-1">
+										<p class="text-center">
+											<img src="./assets/img/driver_photo.jpg" alt="Foto del Conductor" class="img-responsive center-block">
+										</p>
+										<p class="text-center">
+											<a href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-download"></i> Descargar Foto</a>
+										</p>
+									</div>
+								</div>
+							</div>
+					  	</div>
+					  	<div class="tab-pane fade" id="debt">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-xs-12 col-md-10 col-md-offset-1">
+										<div class="form-group label-floating">
+										  <label class="control-label">Deuda</label>
+										  <input class="form-control" type="text">
+										</div>
+									</div>
+								</div>
+							</div>
+					  	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Notifications area -->
+	<section class="full-box Notifications-area">
+		<div class="full-box Notifications-bg btn-Notifications-area"></div>
+		<div class="full-box Notifications-body">
+			<div class="Notifications-body-title text-titles text-center">
+				Notificaciones <i class="zmdi zmdi-close btn-Notifications-area"></i>
+			</div>
+			<div class="list-group">
+			  	<div class="list-group-item">
+				    <div class="row-action-primary">
+				      	<i class="zmdi zmdi-alert-triangle"></i>
+				    </div>
+				    <div class="row-content">
+				      	<div class="least-content">17m</div>
+				      	<h4 class="list-group-item-heading">Alertas de mantenimiento de vehículos</h4>
+				      	<p class="list-group-item-text">Informar a los administradores sobre el próximo mantenimiento de los vehículos, incluyendo fechas y detalles.</p>
+				    </div>
+			    </div>    
+				<div class="list-group-separator"></div>
+			  	<div class="list-group-item">
+				    <div class="row-action-primary">
+				      	<i class="zmdi zmdi-alert-octagon"></i>
+				    </div>
+					<div class="row-content">
+						<div class="least-content">17m</div>
+						<h4 class="list-group-item-heading">Actualización del sistema </h4>
+						<p class="list-group-item-text">Avisar sobre actualizaciones de software, mantenimiento del sistema, o cualquier cambio técnico que pueda afectar el funcionamiento del sitio.</p>
+				    </div>
+				</div>
+				<div class="list-group-separator"></div>
+			  	<div class="list-group-item">
+				    <div class="row-action-primary">
+				      	<i class="zmdi zmdi-alert-octagon"></i>
+				    </div>
+				    <div class="row-content">
+						<div class="least-content">17m</div>
+						<h4 class="list-group-item-heading">Solicitudes de taxi pendientes</h4>
+						<p class="list-group-item-text">Notificar a los administradores sobre nuevas solicitudes de taxi que requieren aprobación o asignación.</p>
+			        </div>
+			  	</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Dialog help -->
+<div class="modal fade" tabindex="-1" role="dialog" id="Dialog-Help">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		  <div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  <h4 class="modal-title">Ayuda</h4>
+		  </div>
+		  <div class="modal-body">
+			  <p>
+				  Aqui se colocara informacion de apoyo para los usuarios
+			  </p>
+		  </div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-primary btn-raised" data-dismiss="modal"><i class="zmdi zmdi-thumb-up"></i> Ok</button>
+			</div>
+	  </div>
+	</div>
+</div>
+
+	<!--====== Scripts -->
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script src="./js/sweetalert2.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/material.min.js"></script>
+	<script src="./js/ripples.min.js"></script>
+	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$.material.init();
+
+		// JavaScript para cambiar de pestaña cuando se haga clic en los botones "refresh", "foto" y "deuda"
+		$(document).ready(function(){
+			$('.btn-profile').on('click', function(){
+				$('.nav-tabs a[href="#profile"]').tab('show');
+			});
+			$('.btn-photo').on('click', function(){
+				$('.nav-tabs a[href="#photo"]').tab('show');
+			});
+			$('.btn-debt').on('click', function(){
+				$('.nav-tabs a[href="#debt"]').tab('show');
+			});
+		});
+	</script>
+</body>
+</html>
